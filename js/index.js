@@ -1,11 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('page loaded')
+    getSpacecraft()
+
     const feedbackForm = document.getElementById('feedbackForm')
     feedbackForm.addEventListener('submit', addFeedback) 
     const buttonDiv = document.getElementById('buttonDiv')
     buttonDiv.addEventListener('click', buttonClick)
 
 })
+
+const BASE_URL = "https://lldev.thespacedevs.com/2.2.0/spacecraft"
+
+
+function getSpacecraft () {
+    let fullList = document.getElementById('fullList')
+    fetch(`${BASE_URL}`)
+    .then(resp => resp.json())
+    .then (data => {
+        console.log(data)
+    })
+}
+
+
+
 
 const addFeedback = (event) => {
     event.preventDefault()

@@ -9,21 +9,43 @@ document.addEventListener('DOMContentLoaded', () => {
 const BASE_URL = "http://localhost:3000/spacecraft"
 
 function fetchSpacecraft () {
-    let fullList = document.getElementById('fullList')
     fetch(`${BASE_URL}`)
     .then(resp => resp.json())
     .then(data => {
         console.log(data)
 
-        const allSpacecraft = document.querySelector('#spacecraftContainer')
+        const allSpacecraft = document.querySelector('#allSpacecraftContainer')
         allSpacecraft.innerHTML = showAllSpacecraft(data)
-    }
+    })
 }
 
 function showAllSpacecraft (allSpacecraft) {
-    return allSpacecraft.map(spacecraft => showSingleSpacecraft(spacecraft)).join(" ")
+    return allSpacecraft.map(oneSpacecraft => showSingleSpacecraft(oneSpacecraft)).join(" ")
 }
 
+function showSingleSpacecraft (spacecraft) {
+    
+        let singleSpacecraft = document.getElementById ('singleSpacecraft')
+        singleSpacecraft.innerHTML =+
+            return `
+                <div class="spacecraftCard" id="${spacecraft.id}>
+                    <h1>${spacecraft.name}</h1>
+                    Images
+Name
+Agency
+Country
+Description
+Status
+Whether it is human-rated
+Crew capacity
+Capability
+Date of maiden voyage
+
+                `
+    
+    
+}
+let fullList = document.getElementById('fullList')
         /* data.forEach (spacecraft => {
 	        fullList.innerHTML +=
 	            `<tr>

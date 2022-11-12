@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
-const BASE_URL = "https://lldev.thespacedevs.com/2.2.0/spacecraft"
+const BASE_URL = "http://localhost:3000/spacecraft"
 
 
 function getSpacecraft () {
@@ -18,8 +18,19 @@ function getSpacecraft () {
     .then(resp => resp.json())
     .then (data => {
         console.log(data)
-    })
-}
+        data.forEach (spacecraft => {
+	        fullList.innerHTML +=
+	            `<tr>
+	                <td>
+	                    ${spacecraft.name}
+	                </td>
+	                <td>
+	                    ${spacecraft.agency.name}
+	                </td>
+	            </tr>`
+            })
+        })
+   }
 
 
 

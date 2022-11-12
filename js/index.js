@@ -1,24 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('page loaded')
-    getSpacecraft()
+    fetchSpacecraft()
 
-    const feedbackForm = document.getElementById('feedbackForm')
-    feedbackForm.addEventListener('submit', addFeedback) 
-    const buttonDiv = document.getElementById('buttonDiv')
-    buttonDiv.addEventListener('click', buttonClick)
+
 
 })
 
 const BASE_URL = "http://localhost:3000/spacecraft"
 
-
-function getSpacecraft () {
+function fetchSpacecraft () {
     let fullList = document.getElementById('fullList')
     fetch(`${BASE_URL}`)
     .then(resp => resp.json())
-    .then (data => {
+    .then(data => {
         console.log(data)
-        data.forEach (spacecraft => {
+
+        const allSpacecraft = document.querySelector('#spacecraftContainer')
+        allSpacecraft.innerHTML = showAllSpacecraft(data)
+    }
+}
+
+function showAllSpacecraft (allSpacecraft) {
+    return allSpacecraft.map(spacecraft => showSingleSpacecraft(spacecraft)).join(" ")
+}
+
+        /* data.forEach (spacecraft => {
 	        fullList.innerHTML +=
 	            `<tr>
 	                <td>
@@ -28,14 +34,24 @@ function getSpacecraft () {
 	                    ${spacecraft.agency.name}
 	                </td>
 	            </tr>`
-            })
-        })
+            })*/
+        }) 
    }
 
+   function getOneSpacecraft () {
 
+   }
 
+function renderForm () {
+    const feedbackForm = document.getElementById('feedbackForm')
+    feedbackForm.addEventListener('submit', addFeedback) 
+    const buttonDiv = document.getElementById('buttonDiv')
+    buttonDiv.addEventListener('click', buttonClick)
+}
 
-const addFeedback = (event) => {
+function addFeedback () {
+
+    const addFeedback = (event) => {
     event.preventDefault()
     console.log('submitted')
     //form is target of submit
@@ -48,19 +64,22 @@ const addFeedback = (event) => {
     const feedback = document.getElementById('#feedbackContainer')
     feedback.appendChild(addFeedback)
     userFeedback.value = "" //resets feedback field
+    }
 }
 
-const buttonClick = () => {
-    console.log("clicked button")
-    console.log(event.target.dataset)
+function optionButtons () {
+    const buttonClick = () => {
+        console.log("clicked button")
+        console.log(event.target.dataset)
 
-    const name = event.target.dataset.name //grab btn name
+        const name = event.target.dataset.name //grab btn name
 
-    if (name === 'button1') {
-        window.alert('button1')
-    } else if (name === 'button2')  {
-        window.alert('button2')
-    } else {
-        window.alert('button3')
+        if (name === 'button1') {
+            window.alert('button1')
+        } else if (name === 'button2')  {
+            window.alert('button2')
+        } else {
+            window.alert('button3')
+        }
     }
 }

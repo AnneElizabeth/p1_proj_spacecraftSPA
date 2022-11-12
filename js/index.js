@@ -25,28 +25,24 @@ function showAllSpacecraft (allSpacecraft) {
 
 function showSingleSpacecraft (spacecraft) {
     
-        let singleSpacecraft = document.getElementById ('singleSpacecraft')
-        singleSpacecraft.innerHTML =+
-            return `
-                <div class="spacecraftCard" id="${spacecraft.id}>
-                    <h1>${spacecraft.name}</h1>
-                    Images
-Name
-Agency
-Country
-Description
-Status
-Whether it is human-rated
-Crew capacity
-Capability
-Date of maiden voyage
-
-                `
-    
-    
+    let spacecraftCard = document.getElementById ('spacecraftCard')
+    spacecraftCard.innerHTML =+
+        //add image grid
+        return `
+            <div class="spacecraftCard" id="${spacecraft.id}>
+                <h1>${spacecraft.name}</h1>
+                <h3>Country: ${spacecraft.agency.country_code}</h3>
+                <h3>Agency: ${spacecraft.agency.}</h3>
+                <h3>Status ${spacecraft.in_use}</h3>
+                <h3>Human-rated: ${spacecraft.human_rated}</h3>
+                <h3>Capability: ${spacecraft.capability}</h3>
+                <h3>Crew Capacity: ${spacecraft.crew_capacity}</h3>
+                <h3>Maiden Voyage: ${spacecraft.maiden_flight}</h3>
+                <p>${spacecraft.description}</p>
+            `
 }
-let fullList = document.getElementById('fullList')
-        /* data.forEach (spacecraft => {
+ /*let fullList = document.getElementById('fullList')
+        data.forEach (spacecraft => {
 	        fullList.innerHTML +=
 	            `<tr>
 	                <td>
@@ -56,9 +52,9 @@ let fullList = document.getElementById('fullList')
 	                    ${spacecraft.agency.name}
 	                </td>
 	            </tr>`
-            })*/
+            })
         }) 
-   }
+   }*/
 
    function getOneSpacecraft () {
 

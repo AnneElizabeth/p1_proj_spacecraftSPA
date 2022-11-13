@@ -14,16 +14,61 @@ function fetchSpacecraft () {
     .then(data => {
         console.log(data)
 
-        const allSpacecraft = document.querySelector('#allSpacecraftContainer')
-        allSpacecraft.innerHTML = showAllSpacecraft(data)
-    })
-}
+            const spacecraftList = document.querySelector('#spacecraftList')
+            data.forEach (spacecraft => {
+                spacecraftList.innerHTML +=
+                    `<li class="tm-list-group-item">
+                        ${spacecraft.name} | ${spacecraft.agency.name}
+                    </li>`
+            })
+        }) 
+    }
 
-function showAllSpacecraft (allSpacecraft) {
+/*             singleSpacecraft.innerHTML +=
+            `
+                <h1>${spacecraft.name}</h1>
+                <h3>Country: ${spacecraft.agency.country_code}</h3>
+                <h3>Agency: ${spacecraft.agency}</h3>
+                <h3>Status ${spacecraft.in_use}</h3>
+                <h3>Human-rated: ${spacecraft.human_rated}</h3>
+                <h3>Capability: ${spacecraft.capability}</h3>
+                <h3>Crew Capacity: ${spacecraft.crew_capacity}</h3>
+                <h3>Maiden Voyage: ${spacecraft.maiden_flight}</h3>
+                <p>${spacecraft.description}</p>
+            `
+       })
+    })
+} */ 
+
+        /* let spacecraftCard = document.getElementByID ('#spacecraftCard')
+        data.forEach (spacecraft => {
+            spacecraftCard.innerHTML +=
+            //add image grid
+                `
+                    <h1>${spacecraft.name}</h1>
+                    <h3>Country: ${spacecraft.agency.country_code}</h3>
+                    <h3>Agency: ${spacecraft.agency}</h3>
+                    <h3>Status ${spacecraft.in_use}</h3>
+                    <h3>Human-rated: ${spacecraft.human_rated}</h3>
+                    <h3>Capability: ${spacecraft.capability}</h3>
+                    <h3>Crew Capacity: ${spacecraft.crew_capacity}</h3>
+                    <h3>Maiden Voyage: ${spacecraft.maiden_flight}</h3>
+                    <p>${spacecraft.description}</p>
+                `
+            })
+        })
+    }
+ */
+
+/*         const allSpacecraft = document.querySelector('#allSpacecraftContainer')
+        allSpacecraft.innerHTML = showAllSpacecraft(data)
+ */   
+
+/* function showAllSpacecraft (allSpacecraft) {
     return allSpacecraft.map(oneSpacecraft => showSingleSpacecraft(oneSpacecraft)).join(" ")
 }
-
-function showSingleSpacecraft (spacecraft) {
+ */
+/* function showSingleSpacecraft (spacecraft) {
     
     let spacecraftCard = document.getElementById ('spacecraftCard')
     spacecraftCard.innerHTML =+
@@ -41,26 +86,13 @@ function showSingleSpacecraft (spacecraft) {
                 <p>${spacecraft.description}</p>
             `
 }
- /*let fullList = document.getElementById('fullList')
-        data.forEach (spacecraft => {
-	        fullList.innerHTML +=
-	            `<tr>
-	                <td>
-	                    ${spacecraft.name}
-	                </td>
-	                <td>
-	                    ${spacecraft.agency.name}
-	                </td>
-	            </tr>`
-            })
-        }) 
-   }*/
+ 
 
-   function getOneSpacecraft () {
+ /*   function getOneSpacecraft () {
 
    }
-
-function renderForm () {
+ */
+/* function renderForm () {
     const feedbackForm = document.getElementById('feedbackForm')
     feedbackForm.addEventListener('submit', addFeedback) 
     const buttonDiv = document.getElementById('buttonDiv')
@@ -100,4 +132,4 @@ function optionButtons () {
             window.alert('button3')
         }
     }
-}
+} */

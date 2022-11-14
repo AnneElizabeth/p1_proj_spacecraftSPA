@@ -12,78 +12,50 @@
     <title>Phase 1 Project | Spacecraft SPA</title>
   </head>
   <body>
-    <div id="header">
-      <header>
-        <div>
-          <h1>SPACECRAFT SPA</h1>
-          <div id="banner"></div>
+  <div id="header">
+    <header>
+      <div>
+        <h1>SPACECRAFT SPA</h1>
+        <div id="banner"></div>
+      </div>
+    </header>
+    <main>
+      <div id="dataContainer">
+        <div id="listBox">
+          <ul id="spacecraftList">
+          </ul>
         </div>
-      </header>
-      <main>
-        <div id="dataContainer">
-          <div id="listBox">
-            <ul id="spacecraftList">
+        <div id="infoCard">
+        </div>
+      </div> 
+      <div id="formContainer">
+        <form id="feedbackForm">
+          <p>We'd love to hear your <b>positive and constructive</b> feedback about this application.</p>
+          
+          <label for="name">Your Name:</label>
+          <input type="text" id="form-name" name="name">
+
+          <label for="email">Your Email:</label>
+          <input type="text" id="form-email" name="email">
+        
+          <label for="feedback">Your Feedback:</label>
+          <input type="textarea" id="form-feedback" name="feedback">
             
-            </ul>
-          </div>
-          <div id="infoCard">
+          <input type="submit" value="ADD FEEDBACK"/>
+        </form>
+      </div>
 
-          </div>
-        </div> 
-       <!--  <div id="formContainer">
-          <form id="feedbackForm">
-          
-            <label for="title">Your Name:</label>
-            <input type="text" id="form-title" name="title">
-  
-            <label for="author">Your Email:</label>
-            <input type="text" id="form-author" name="author">
-          
-            <label for="price">Price:</label>
-            <input type="number" id="form-price" name="price">
-          
-            <label for="imageUrl">Image url:</label>
-            <input type="text" id="form-imageUrl" name="imageUrl">
-          
-            <label for="inventory">Inventory:</label>
-            <input type="text" id="inventory" name="inventory">
-              
-            <input type="submit" value="ADD BOOK"/>
-          </form>
-      </div> -->
+      <div id="feedbackContainer">
 
-        </div>
-       
-      </main>
-
-  <!--       <div id="form-wrapper">
-          <form id="book-form">
-          
-            <label for="title">Title:</label>
-            <input type="text" id="form-title" name="title">
-  
-            <label for="author">Author:</label>
-            <input type="text" id="form-author" name="author">
-          
-            <label for="price">Price:</label>
-            <input type="number" id="form-price" name="price">
-          
-            <label for="imageUrl">Image url:</label>
-            <input type="text" id="form-imageUrl" name="imageUrl">
-          
-            <label for="inventory">Inventory:</label>
-            <input type="text" id="inventory" name="inventory">
-              
-            <input type="submit" value="ADD BOOK"/>
-          </form>
-      </div> -->
+      </div>
+      
+    </main>
 
       <footer>
         <div></div>
         <div></div>
         <div></div>
       </footer>
-    </div>
   </body>
   
 </html>

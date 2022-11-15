@@ -2,7 +2,7 @@
     "comments": [],
     "spacecraft": [
         {
-        "id": 10,
+        "id":10,
         "url": "https://ll.thespacedevs.com/2.2.0/config/spacecraft/10/?format=json",
         "name": "Apollo Command/Service Module",
         "agency": {
@@ -33,7 +33,7 @@
         "info_link": ""
         },
         {
-        "id": 17,
+        "id":17,
         "url": "https://ll.thespacedevs.com/2.2.0/config/spacecraft/17/?format=json",
         "name": "Automated Transfer Vehicle (ATV)",
         "agency": {
@@ -64,7 +64,7 @@
         "info_link": ""
         },
         {
-        "id": 28,
+        "id":28,
         "url": "https://ll.thespacedevs.com/2.2.0/config/spacecraft/28/?format=json",
         "name": "Buran",
         "agency": {
@@ -95,7 +95,7 @@
         "info_link": ""
         },
         {
-        "id": 7,
+        "id":7,
         "url": "https://ll.thespacedevs.com/2.2.0/config/spacecraft/7/?format=json",
         "name": "Cargo Dragon 2",
         "agency": {
@@ -126,7 +126,7 @@
         "info_link": "https://www.spacex.com/dragon"
         },
         {
-        "id": 22,
+        "id":22,
         "url": "https://ll.thespacedevs.com/2.2.0/config/spacecraft/22/?format=json",
         "name": "Crew Capsule 1",
         "agency": {
@@ -157,7 +157,7 @@
         "info_link": ""
         },
         {
-        "id": 21,
+        "id":21,
         "url": "https://ll.thespacedevs.com/2.2.0/config/spacecraft/21/?format=json",
         "name": "Crew Capsule 2.0",
         "agency": {
@@ -188,7 +188,7 @@
         "info_link": ""
         },
         {
-        "id": 6,
+        "id":6,
         "url": "https://ll.thespacedevs.com/2.2.0/config/spacecraft/6/?format=json",
         "name": "Crew Dragon 2",
         "agency": {
@@ -219,7 +219,7 @@
         "info_link": "https://www.spacex.com/crew-dragon"
         },
         {
-        "id": 9,
+        "id":9,
         "url": "https://ll.thespacedevs.com/2.2.0/config/spacecraft/9/?format=json",
         "name": "CST-100 Starliner",
         "agency": {
@@ -250,7 +250,7 @@
         "info_link": "http://www.boeing.com/space/starliner/"
         },
         {
-        "id": 19,
+        "id":19,
         "url": "https://ll.thespacedevs.com/2.2.0/config/spacecraft/19/?format=json",
         "name": "Cygnus Enhanced",
         "agency": {
@@ -270,7 +270,7 @@
             "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/northrop2520grumman2520innovation2520systems_image_20190207032451.jpeg",
             "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/northrop2520grumman2520innovation2520systems_logo_20190207032451.png"
         },
-        "in_use": true,
+        "in_use":true,
         "capability": "Cargo Earth Orbit Logistics",
         "maiden_flight": "2015-12-06",
         "human_rated": false,
@@ -281,7 +281,7 @@
         "info_link": ""
         },
         {
-        "id": 5,
+        "id":5,
         "url": "https://ll.thespacedevs.com/2.2.0/config/spacecraft/5/?format=json",
         "name": "Cygnus Standard",
         "agency": {

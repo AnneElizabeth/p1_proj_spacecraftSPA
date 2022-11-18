@@ -19,7 +19,7 @@
             "launchers": "North American X-15",
             "spacecraft": "",
             "parent": "Boeing",
-            "image_url": null,
+            "img": null,
             "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/north2520american2520aviation_logo_20200711032022.png"
         },
         "in_use": false,
@@ -27,7 +27,7 @@
         "maiden_flight": "1966-02-26",
         "human_rated": true,
         "crew_capacity": 3,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/apollo2520command2fservice2520module_image_20190207032507.jpeg",
+        "img": "img/apollo.png",
         "nation_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_nation/apollo2520command2fservice2520module_image_20190207032507.png",
         "wiki_link": "https://en.wikipedia.org/wiki/Apollo_Command/Service_Module",
         "info_link": ""
@@ -50,7 +50,7 @@
         "launchers": "Ariane 5 | Vega",
         "spacecraft": "",
         "parent": null,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/arianespace_image_20190207032425.jpeg",
+        "img": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/arianespace_image_20190207032425.jpeg",
         "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/arianespace_logo_20210603173752.png"
         },
         "in_use": false,
@@ -58,7 +58,7 @@
         "maiden_flight": "2008-03-09",
         "human_rated": false,
         "crew_capacity": null,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/automated2520transfer2520vehicle25202528atv2529_image_20190207032508.jpeg",
+        "img": "img/atv.png",
         "nation_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_nation/automated2520transfer2520vehicle25202528atv2529_image_20190207032508.png",
         "wiki_link": "https://en.wikipedia.org/wiki/Automated_Transfer_Vehicle",
         "info_link": ""
@@ -81,7 +81,7 @@
             "launchers": "Soyuz",
             "spacecraft": "Soyuz",
             "parent": null,
-            "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/russian2520federal2520space2520agency25202528roscosmos2529_image_20190207032459.jpeg",
+            "img": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/russian2520federal2520space2520agency25202528roscosmos2529_image_20190207032459.jpeg",
             "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/russian2520federal2520space2520agency25202528roscosmos2529_logo_20190207032459.png"
         },
         "in_use": false,
@@ -89,7 +89,7 @@
         "maiden_flight": "1988-11-15",
         "human_rated": true,
         "crew_capacity": 4,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/buran_image_20210902151254.jpg",
+        "img": "img/buran.png",
         "nation_url": null,
         "wiki_link": "https://en.wikipedia.org/wiki/Buran_(spacecraft)",
         "info_link": ""
@@ -112,7 +112,7 @@
             "launchers": "Falcon",
             "spacecraft": "Dragon",
             "parent": null,
-            "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/spacex_image_20190207032501.jpeg",
+            "img": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/spacex_image_20190207032501.jpeg",
             "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/spacex_logo_20220826094919.png"
         },
         "in_use": true,
@@ -120,7 +120,7 @@
         "maiden_flight": "2020-12-06",
         "human_rated": false,
         "crew_capacity": null,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/cargo_dragon_2_image_20220905121632.jpg",
+        "img": "img/cargo_dragon_2.png",
         "nation_url": null,
         "wiki_link": "https://en.wikipedia.org/wiki/Dragon_2",
         "info_link": "https://www.spacex.com/dragon"
@@ -143,7 +143,7 @@
             "launchers": "New Shepard | New Glenn",
             "spacecraft": "",
             "parent": null,
-            "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/blue2520origin_image_20190207032427.jpeg",
+            "img": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/blue2520origin_image_20190207032427.jpeg",
             "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/blue2520origin_logo_20190207032427.png"
         },
         "in_use": false,
@@ -151,7 +151,7 @@
         "maiden_flight": "2015-04-29",
         "human_rated": false,
         "crew_capacity": null,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/crew2520capsule25201_image_20190309100308.jpg",
+        "img": "img/blue_origin.png",
         "nation_url": null,
         "wiki_link": "",
         "info_link": ""
@@ -174,7 +174,7 @@
             "launchers": "New Shepard | New Glenn",
             "spacecraft": "",
             "parent": null,
-            "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/blue2520origin_image_20190207032427.jpeg",
+            "img": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/blue2520origin_image_20190207032427.jpeg",
             "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/blue2520origin_logo_20190207032427.png"
         },
         "in_use": true,
@@ -182,7 +182,7 @@
         "maiden_flight": "2017-12-12",
         "human_rated": true,
         "crew_capacity": 6,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/crew2520capsule25202.0_image_20190309095011.jpeg",
+        "img": "img/blue_origin_crewcap2.png",
         "nation_url": null,
         "wiki_link": "",
         "info_link": ""
@@ -205,7 +205,7 @@
             "launchers": "Falcon",
             "spacecraft": "Dragon",
             "parent": null,
-            "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/spacex_image_20190207032501.jpeg",
+            "img": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/spacex_image_20190207032501.jpeg",
             "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/spacex_logo_20220826094919.png"
         },
         "in_use": true,
@@ -213,7 +213,7 @@
         "maiden_flight": "2019-03-02",
         "human_rated": true,
         "crew_capacity": 4,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/crew2520dragon25202_image_20200117151409.jpeg",
+        "img": "img/crew-dragon2.png",
         "nation_url": null,
         "wiki_link": "https://en.wikipedia.org/wiki/Dragon_2",
         "info_link": "https://www.spacex.com/crew-dragon"
@@ -236,7 +236,7 @@
             "launchers": "SLS",
             "spacecraft": "Starliner",
             "parent": null,
-            "image_url": null,
+            "img": null,
             "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/boeing_logo_20201128183345.png"
         },
         "in_use": true,
@@ -244,7 +244,7 @@
         "maiden_flight": "2019-08-17",
         "human_rated": true,
         "crew_capacity": 7,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/cst-100_starlin_image_20220525083417.jpg",
+        "img": "img/cst-100.png",
         "nation_url": null,
         "wiki_link": "https://en.wikipedia.org/wiki/Boeing_CST-100_Starliner",
         "info_link": "http://www.boeing.com/space/starliner/"
@@ -267,7 +267,7 @@
             "launchers": "Antares | Minotaur | Pegasus",
             "spacecraft": "Cygnus",
             "parent": null,
-            "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/northrop2520grumman2520innovation2520systems_image_20190207032451.jpeg",
+            "img": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/northrop2520grumman2520innovation2520systems_image_20190207032451.jpeg",
             "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/northrop2520grumman2520innovation2520systems_logo_20190207032451.png"
         },
         "in_use":true,
@@ -275,7 +275,7 @@
         "maiden_flight": "2015-12-06",
         "human_rated": false,
         "crew_capacity": null,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/cygnus2520enhanced_image_20190207032513.jpeg",
+        "img": "img/cygnus-enhanced.png",
         "nation_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_nation/cygnus2520enhanced_image_20190207032514.png",
         "wiki_link": "https://en.wikipedia.org/wiki/Cygnus_(spacecraft)",
         "info_link": ""
@@ -298,7 +298,7 @@
             "launchers": "Antares | Minotaur | Pegasus",
             "spacecraft": "Cygnus",
             "parent": null,
-            "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_images/northrop2520grumman2520innovation2520systems_image_20190207032451.jpeg",
+            "img": "img/cygnus-std.png",
             "logo_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/logo/northrop2520grumman2520innovation2520systems_logo_20190207032451.png"
         },
         "in_use": true,
@@ -306,7 +306,7 @@
         "maiden_flight": "2013-09-18",
         "human_rated": false,
         "crew_capacity": null,
-        "image_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/cygnus2520standard_image_20190207032514.jpeg",
+        "img": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/orbiter_images/cygnus2520standard_image_20190207032514.jpeg",
         "nation_url": "https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/agency_nation/cygnus2520standard_image_20190207032515.png",
         "wiki_link": "https://en.wikipedia.org/wiki/Cygnus_(spacecraft)",
         "info_link": ""

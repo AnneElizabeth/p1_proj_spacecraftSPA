@@ -2,7 +2,7 @@ let dataArray = []
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchSpacecraft()
-    takeOff()
+    headerButtons()
     addForm()
 })
 
@@ -15,15 +15,18 @@ function fetchSpacecraft () {
     })
 }
 
-function takeOff() {
+function headerButtons() {
     const launchButton = document.getElementById('launch')
-    launchButton.addEventListener('click', function() {
-        const audioElement = new Audio("sounds/launch-85216.mp3")
-        audioElement.play()
-        dataArray.forEach(addInfoCard)
-    })
+    launchButton.addEventListener('click', launchSpacecraft)
+    
     const feedbackBtn = document.getElementById('feedback')
     feedbackBtn.addEventListener('click', showForm)
+}
+
+function launchSpacecraft () {
+    const audioElement = new Audio("sounds/launch-85216.mp3")
+    audioElement.play()
+    dataArray.forEach(addInfoCard)
 }
 
 function addInfoCard (spacecraft) {
@@ -67,7 +70,6 @@ function addForm() {
         `
         const submitForm = document.getElementById('submit')
         submitForm.addEventListener('submit', submitData)
-        event.preventDefault()
 }
 
 function showForm () {
@@ -99,9 +101,5 @@ function submitData (name, email, feedback) {
     })
     .catch (function (error) {
         document.body.innerHTML = error.message
-    }) 
-}
-
-function jumpTo (anchor_id) {
-    location.href = '#' + 'anchor_id'
+    })
 }

@@ -15,34 +15,34 @@
     <title>Phase 1 Project | Spacecraft SPA</title>
   </head>
   <body>
-  <div id="takeoff">
+  <div>
     <header>
       <div>
         <h1>SPACECRAFT SPA</h1>
-        <!-- <button type="button" onClick="showActiveSpacecraft()" name="Active Spacecraft">Active Spacecraft</button> -->
+        <button type="button" name="Launch Spacecraft" id="launch">Launch Spacecraft</button>
       </div>
     </header>
     <main> 
       <div id="grid-wrapper">
           
-      </div> 
-      <div id="formContainer" class="infocard">
-        <form id="feedbackForm" >
-          <p>We'd love to hear your <b>positive and constructive</b> feedback about this application.</p>
-          
-          <label for="name">Your Name:</label>
-          <input type="text" id="form-name" name="name">
-
-          <label for="email">Your Email:</label>
-          <input type="text" id="form-email" name="email">
-        
-          <label for="feedback">Your Feedback:</label>
-          <input type="textarea" id="new-feedback" name="feedback">
-            
-          <input type="submit" value="ADD FEEDBACK"/>
-        </form>
       </div>
+      <div id="formContainer" class="formCard">
+          <form id="feedbackForm" >
+              <p>We'd love to hear your <b>positive and constructive</b> feedback about this application.</p>
+              
+              <label for="name">Your Name:</label>
+              <input type="text" id="form-name" name="name">
 
+              <label for="email">Your Email:</label>
+              <input type="text" id="form-email" name="email">
+            
+              <label for="feedback">Your Feedback:</label>
+              <input type="textarea" id="new-feedback" name="feedback">
+                
+              <input type="submit" value="ADD FEEDBACK"/>
+          </form>
+        </div>
+    </div> 
       <div id="feedbackContainer">
 
       </div>

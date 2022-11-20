@@ -1,6 +1,6 @@
-# Foobar
+# Spacecraft SPA
 
-Foobar is a Python library for dealing with word pluralization.
+Spacecraft SPA is a single-page application that displays information about various spacecraft.
 
 ## Installation
 

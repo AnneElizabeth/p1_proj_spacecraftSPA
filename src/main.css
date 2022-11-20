@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+}
+
+header {
+  height: 15%;
+  background-color: #b2b6b3;
+  padding: 15px;
+
+}
+header div h1 {
+  text-align: left;
+  color: aliceblue;
+  /* text-shadow: 2px 4px #252525; */
+  font-family: 'Space Grotesk', sans-serif;
+  display: inline-block;
+}
+
+.btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12;
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.btnSubmit {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12;
+  margin: 20px 21px 5px 5px;
+}
+
+main {
+  background-image: url("../img/bg_image_space.jpg");
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: left;
+}
+
+
+#grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  padding:20px;
+}
+
+.infocard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.card-details {
+  padding: 2px 16px;
+}
+
+#formContainer { 
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.hideForm {
+  display: none;
+}
+
+.showForm {
+  display: block;
+}
+
+.formCard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+}
+
+input{
+  height: 40px;
+  width: 100%;
+  margin: 5px;
+  /* font-family: 'Courier New', Courier, monospace; */
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  background-color: #b2b6b3;
+  font-size: 12px;
+  resize: none;
+}
+
+form{
+  margin: 10px auto 10px auto;
+  width: 600px; 
+}
+
+input {
+  margin: 20px 0;
+}
+
+footer{
+  text-align: left center;
+}
+
+.projectID {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10;
+  height: 5%;
+  background-color: #b2b6b3;
+  padding: 15px;
+}
+
+/* font-family: 'Space Grotesk', sans-serif;
+font-family: 'Space Mono', monospace; */

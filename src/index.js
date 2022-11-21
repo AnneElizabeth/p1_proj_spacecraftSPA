@@ -23,6 +23,7 @@ function headerButtons() {
     feedbackBtn.addEventListener('click', showForm)
 }
 
+
 function launchSpacecraft () {
     const audioElement = new Audio("sounds/launch-85216.mp3")
     audioElement.play()
@@ -68,8 +69,12 @@ function addForm() {
             </form>
         </div>
         `
-        const submitForm = document.getElementById('submit')
-        submitForm.addEventListener('submit', submitData)
+    const submitForm = document.getElementById('submit')
+    submitForm.addEventListener('submit', (event) => {
+        event.preventDefault(); 
+        submitData()      
+        submitForm.reset()
+    })
 }
 
 function showForm () {
@@ -81,7 +86,9 @@ function showForm () {
 }
 
 function submitData (name, email, feedback) {
-    return fetch ('http://localhost:3000/comments', {
+    const feedbackContainer = document.getElementById('feedbackContainer')
+
+    fetch ('http://localhost:3000/comments', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -96,8 +103,12 @@ function submitData (name, email, feedback) {
     .then (function (response) {
         return response.json()
     })
-    .then (function (object) {
-        document.body.innerHTML = object[ "id", "name", "email", "feedback" ]
+    .then (function (json) {
+        feedbackContainer.innerText += 
+        `<p>
+            ${json.feedback}
+        </p>
+        ` 
     })
     .catch (function (error) {
         document.body.innerHTML = error.message

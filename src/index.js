@@ -69,11 +69,10 @@ function addForm() {
             </form>
         </div>
         `
-    const submitForm = document.getElementById('submit')
-    submitForm.addEventListener('submit', (event) => {
-        event.preventDefault(); 
-        submitData()      
-        submitForm.reset()
+    const submitForm = document.getElementById('feedbackForm')
+    submitForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        submitData()
     })
 }
 
@@ -86,9 +85,7 @@ function showForm () {
 }
 
 function submitData (name, email, feedback) {
-    const feedbackContainer = document.getElementById('feedbackContainer')
-
-    fetch ('http://localhost:3000/comments', {
+    return fetch ('http://localhost:3000/comments', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -102,13 +99,6 @@ function submitData (name, email, feedback) {
     })
     .then (function (response) {
         return response.json()
-    })
-    .then (function (json) {
-        feedbackContainer.innerText += 
-        `<p>
-            ${json.feedback}
-        </p>
-        ` 
     })
     .catch (function (error) {
         document.body.innerHTML = error.message

@@ -3,7 +3,6 @@ let dataArray = []
 document.addEventListener('DOMContentLoaded', () => {
     fetchSpacecraft()
     headerButtons()
-    addForm()
 })
 
 function fetchSpacecraft() {
@@ -20,7 +19,7 @@ function headerButtons() {
     launchButton.addEventListener('click', launchSpacecraft)
     
     const feedbackBtn = document.getElementById('feedbackBtn')
-    feedbackBtn.addEventListener('click', showForm)
+    feedbackBtn.addEventListener('click', addForm)
 }
 
 function launchSpacecraft() {
@@ -51,7 +50,7 @@ function addInfoCard (spacecraft) {
     formContainer.innerHTML += 
         `
         <div class="formCard">
-            <form id="form" action="http://localhost:3000/comments" method="POST">
+            <form id="form">
                 <p>We'd love to hear your <b>positive and constructive</b> feedback about this application.</p>
                 
                 <label for="name">Your Name:</label>
@@ -65,19 +64,21 @@ function addInfoCard (spacecraft) {
                 
                 <button type="submit" id="submit" class="btnSubmit"><span class="material-symbols-outlined">satellite_alt</span>  SEND FEEDBACK</button>
             </form>
-            debugger
         </div>
         `
+        location.href = '#giveFeedback'
+        submitListener()
 }
 
-function showForm () {
+/* function showForm () {
     const findHiddenForm = document.getElementById('giveFeedback')
     findHiddenForm.classList.remove('hideForm')
     findHiddenForm.classList.add('showForm')
     location.href = '#giveFeedback'
-} 
+} */ 
 
-function submitData () {
+function submitData (name, email, feedback) {
+    console.log('hello')
     return fetch ('http://localhost:3000/comments', {
         method: 'POST',
         headers: {
@@ -93,15 +94,29 @@ function submitData () {
     .then (function (response) {
         return response.json()
     })
+    .then((data) => console.log(data) )
+    //do something with data
+
     .catch (function (error) {
         document.body.innerHTML = error.message
     })
 }
 
-function submitForm (event) {
-    event.preventDefault()
+function submitListener () {
     const form = document.getElementById('form')
-    form.addEventListener('submit', submitData)
+    console.log(form)
+    form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        const name = document.getElementById('name').value
+        const email = document.getElementById('email').value
+        const feedback = document.getElementById('feedback').value
+        submitData(name, email, feedback)
+        //clear form
+    })   
 }
+
+
+
+
 
 

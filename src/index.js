@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addForm()
 })
 
-function fetchSpacecraft () {
+function fetchSpacecraft() {
     fetch("http://localhost:3000/spacecraft")
     .then(resp => resp.json())
     .then(data => {        
@@ -19,12 +19,11 @@ function headerButtons() {
     const launchButton = document.getElementById('launch')
     launchButton.addEventListener('click', launchSpacecraft)
     
-    const feedbackBtn = document.getElementById('feedback')
+    const feedbackBtn = document.getElementById('feedbackBtn')
     feedbackBtn.addEventListener('click', showForm)
 }
 
-
-function launchSpacecraft () {
+function launchSpacecraft() {
     const audioElement = new Audio("sounds/launch-85216.mp3")
     audioElement.play()
     dataArray.forEach(addInfoCard)
@@ -43,7 +42,6 @@ function addInfoCard (spacecraft) {
                 <p><b>Maiden Voyage</b>: ${spacecraft.maiden_flight}</p>
                 <p class="inUse" style="display: none;">${spacecraft.in_use}</>
             </div>
-
         </div>
         `
 }
@@ -69,19 +67,29 @@ function addForm() {
             </form>
         </div>
         `
-    const submitForm = document.getElementById('feedbackForm')
-    submitForm.addEventListener('submit', (e) => {
+        submitForm()
+/*     const feedbackForm = document.getElementById('feedbackForm')
+    feedbackForm.addEventListener('submit', (e) => {
         e.preventDefault()
         submitData()
+        window.alert('Thank you for your feedback!')
     })
-}
+ */}
 
 function showForm () {
-    const findHiddenForm = document.getElementById('feedbackForm')
+    const findHiddenForm = document.getElementById('feedback')
     findHiddenForm.classList.remove('hideForm')
     findHiddenForm.classList.add('showForm')
+    location.href = '#feedback'
+}
 
-    location.href = '#feedbackForm'
+function submitForm () {
+    const feedbackForm = document.getElementById('feedbackForm')
+    feedbackForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        submitData()
+        window.alert('Thank you for your feedback!')
+    })
 }
 
 function submitData (name, email, feedback) {

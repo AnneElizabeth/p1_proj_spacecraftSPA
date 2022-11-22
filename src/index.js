@@ -67,33 +67,29 @@ function addForm() {
             </form>
         </div>
         `
-        submitForm()
-/*     const feedbackForm = document.getElementById('feedbackForm')
-    feedbackForm.addEventListener('submit', (e) => {
-        e.preventDefault()
-        submitData()
-        window.alert('Thank you for your feedback!')
-    })
- */}
+}
 
 function showForm () {
-    const findHiddenForm = document.getElementById('feedback')
+    const findHiddenForm = document.getElementById('giveFeedback')
     findHiddenForm.classList.remove('hideForm')
     findHiddenForm.classList.add('showForm')
-    location.href = '#feedback'
+    location.href = '#giveFeedback'
 }
 
 function submitForm () {
     const feedbackForm = document.getElementById('feedbackForm')
     feedbackForm.addEventListener('submit', (e) => {
         e.preventDefault()
-        submitData()
-        window.alert('Thank you for your feedback!')
-    })
+        submitData(name, email, feedback)
+
+       
+/*         window.alert('Thank you for your feedback!')
+ */    })
 }
 
 function submitData (name, email, feedback) {
-    return fetch ('http://localhost:3000/comments', {
+debugger
+    return fetch ('http://localhost:3000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

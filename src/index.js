@@ -46,12 +46,19 @@ function addInfoCard (spacecraft) {
         `
 }
 
+function showForm () {
+    const findHiddenForm = document.getElementById('giveFeedback')
+    findHiddenForm.classList.remove('hideForm')
+    findHiddenForm.classList.add('showForm')
+    location.href = '#giveFeedback'
+}  
+
 function addForm() {
     formContainer = document.getElementById('formContainer')
     formContainer.innerHTML += 
         `
         <div class="formCard">
-            <form id="feedbackForm" action="http://localhost:3000/comments" method="POST">
+            <form id="form" action="http://localhost:3000/comments" method="POST">
                 <p>We'd love to hear your <b>positive and constructive</b> feedback about this application.</p>
                 
                 <label for="name">Your Name:</label>
@@ -69,27 +76,18 @@ function addForm() {
         `
 }
 
-function showForm () {
-    const findHiddenForm = document.getElementById('giveFeedback')
-    findHiddenForm.classList.remove('hideForm')
-    findHiddenForm.classList.add('showForm')
-    location.href = '#giveFeedback'
-}
-
 function submitForm () {
-    const feedbackForm = document.getElementById('feedbackForm')
-    feedbackForm.addEventListener('submit', (e) => {
-        e.preventDefault()
-        submitData(name, email, feedback)
-
-       
-/*         window.alert('Thank you for your feedback!')
- */    })
+    
+    const form = document.getElementById('form')
+    form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        event.stopPropagation()
+        submitData
+    })
 }
 
-function submitData (name, email, feedback) {
-debugger
-    return fetch ('http://localhost:3000', {
+function submitData () {
+    fetch ('http://localhost:3000/comments', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -108,3 +106,6 @@ debugger
         document.body.innerHTML = error.message
     })
 }
+submitForm()
+
+

@@ -46,14 +46,7 @@ function addInfoCard (spacecraft) {
         `
 }
 
-function showForm () {
-    const findHiddenForm = document.getElementById('giveFeedback')
-    findHiddenForm.classList.remove('hideForm')
-    findHiddenForm.classList.add('showForm')
-    location.href = '#giveFeedback'
-}  
-
-function addForm() {
+ function addForm() {
     formContainer = document.getElementById('formContainer')
     formContainer.innerHTML += 
         `
@@ -72,22 +65,20 @@ function addForm() {
                 
                 <button type="submit" id="submit" class="btnSubmit"><span class="material-symbols-outlined">satellite_alt</span>  SEND FEEDBACK</button>
             </form>
+            debugger
         </div>
         `
 }
 
-function submitForm () {
-    
-    const form = document.getElementById('form')
-    form.addEventListener('submit', (event) => {
-        event.preventDefault()
-        event.stopPropagation()
-        submitData
-    })
-}
+function showForm () {
+    const findHiddenForm = document.getElementById('giveFeedback')
+    findHiddenForm.classList.remove('hideForm')
+    findHiddenForm.classList.add('showForm')
+    location.href = '#giveFeedback'
+} 
 
 function submitData () {
-    fetch ('http://localhost:3000/comments', {
+    return fetch ('http://localhost:3000/comments', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -106,6 +97,11 @@ function submitData () {
         document.body.innerHTML = error.message
     })
 }
-submitForm()
+
+function submitForm (event) {
+    event.preventDefault()
+    const form = document.getElementById('form')
+    form.addEventListener('submit', submitData)
+}
 
 

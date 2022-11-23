@@ -45,7 +45,7 @@ function addInfoCard (spacecraft) {
         `
 }
 
- function addForm() {
+function addForm() {
     formContainer = document.getElementById('formContainer')
     formContainer.innerHTML += 
         `
@@ -70,15 +70,7 @@ function addInfoCard (spacecraft) {
         submitListener()
 }
 
-/* function showForm () {
-    const findHiddenForm = document.getElementById('giveFeedback')
-    findHiddenForm.classList.remove('hideForm')
-    findHiddenForm.classList.add('showForm')
-    location.href = '#giveFeedback'
-} */ 
-
 function submitData (name, email, feedback) {
-    console.log('hello')
     return fetch ('http://localhost:3000/comments', {
         method: 'POST',
         headers: {
@@ -94,9 +86,10 @@ function submitData (name, email, feedback) {
     .then (function (response) {
         return response.json()
     })
-    .then((data) => console.log(data) )
-    //do something with data
-
+    .then(function (data) {
+        confirmName = document.getElementById('name')
+        confirm(`Thank you for your feedback, ${name}!`)
+     })
     .catch (function (error) {
         document.body.innerHTML = error.message
     })
@@ -104,14 +97,13 @@ function submitData (name, email, feedback) {
 
 function submitListener () {
     const form = document.getElementById('form')
-    console.log(form)
     form.addEventListener('submit', (event) => {
         event.preventDefault()
         const name = document.getElementById('name').value
         const email = document.getElementById('email').value
         const feedback = document.getElementById('feedback').value
         submitData(name, email, feedback)
-        //clear form
+        form.reset()
     })   
 }
 

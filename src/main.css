@@ -35,7 +35,6 @@ main {
   text-align: left;
 }
 
-
 #grid-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -85,7 +84,6 @@ input{
   height: 40px;
   width: 100%;
   margin: 5px;
-  /* font-family: 'Courier New', Courier, monospace; */
 }
 
 textarea {
@@ -118,6 +116,3 @@ footer{
   background-color: #b2b6b3;
   padding: 15px;
 }
-
-/* font-family: 'Space Grotesk', sans-serif;
-font-family: 'Space Mono', monospace; */

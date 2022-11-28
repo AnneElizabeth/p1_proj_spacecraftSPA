@@ -14,7 +14,7 @@ Click on "LAUNCH SPACECRAFT" to load images of and data about multiple spacecraf
 Click on "GIVE FEEDBACK" to view a feedback form and send us your thoughts about the page.
 
 ## Credits
-Spacecraft data and images access via an API developed by [The Space Devs](https://thespacedevs.com/), a group of space enthusiast developers working on a range of services, united in a common goal to improve public knowledge and accessibility of spaceflight information. 
+Spacecraft data and images were accessed via an API developed by [The Space Devs](https://thespacedevs.com/), a group of space enthusiast developers working on a range of services, united in a common goal to improve public knowledge and accessibility of spaceflight information. 
 
 The rocket launch sound effect was provided by [Pixabay](https://pixabay.com/).
 

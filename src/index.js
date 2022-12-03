@@ -39,7 +39,6 @@ function addInfoCard (spacecraft) {
                 <p><b>Country:</b> ${spacecraft.agency.country_code}</p>
                 <p><b>Agency:</b> ${spacecraft.agency.name}</p>
                 <p><b>Maiden Voyage</b>: ${spacecraft.maiden_flight}</p>
-                <p class="inUse" style="display: none;">${spacecraft.in_use}</>
             </div>
         </div>
         `

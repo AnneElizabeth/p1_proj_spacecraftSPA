@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function fetchSpacecraft() {
     fetch("http://localhost:3000/spacecraft")
     .then(resp => resp.json())
-    .then(data => {        
+    .then(data => { 
         dataArray = data   
-        data.push(dataArray)
     })
 }
 
@@ -103,10 +102,19 @@ function submitListener () {
         const feedback = document.getElementById('feedback').value
         submitData(name, email, feedback)
         form.reset()
-    })   
+    }) 
 }
 
+/* const form = document.getElementById('form')
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const comment = document.getElementById('comment').value
+    const feedback = document.querySelector('p')
+    
+    feedback.innerHTML +=
+    `${comment}`
 
+}) */
 
 
 
